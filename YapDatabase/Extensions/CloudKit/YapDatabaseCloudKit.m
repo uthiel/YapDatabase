@@ -604,7 +604,7 @@ NSString *const YapDatabaseCloudKitInFlightChangeSetChangedNotification = @"YDBC
 	CKModifyRecordsOperation *modifyRecordsOperation =
 	  [[CKModifyRecordsOperation alloc] initWithRecordsToSave:recordsToSave recordIDsToDelete:recordIDsToDelete];
 	modifyRecordsOperation.database = database;
-	modifyRecordsOperation.savePolicy = CKRecordSaveIfServerRecordUnchanged;
+	modifyRecordsOperation.savePolicy = options.savePolicy;// CKRecordSaveIfServerRecordUnchanged;
 	
 	__weak YapDatabaseCloudKit *weakSelf = self;
 	

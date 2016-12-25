@@ -1,5 +1,6 @@
 #import <Foundation/Foundation.h>
 #import "YapWhitelistBlacklist.h"
+#import <CloudKit/CloudKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -27,6 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 **/
 @property (nonatomic, strong, readwrite, nullable) YapWhitelistBlacklist *allowedCollections;
 
+@property (readwrite) CKRecordSavePolicy savePolicy;
 
 // Todo: Need ability to set default options for CKModifyRecordsOperation
 
